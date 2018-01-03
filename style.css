@@ -2,13 +2,23 @@
 :root {
     --base: #D72C16;
     --spacing: 10px;
-    --blur: 10px; 
+    --blur: 0px; 
+    --grayscale: 0px;
+    --contrast: 100%;
 }
 
 img {
     padding: var(--spacing);
     background: var(--base);
-    filter: blur(var(--blur));
+    filter: blur(var(--blur)) grayscale(var(--grayscale)) contrast(var(--contrast));
+    width: 500px;
+    height: 400px;
+    margin-top: 50px;
+    border-top-left-radius: 60px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 60px;
+
 }
 
 .h1 {
@@ -18,4 +28,34 @@ img {
 body {
     text-align: center;
     background-color: #763626;
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 10px;
+    background: white;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #D72C16;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: white;
 }

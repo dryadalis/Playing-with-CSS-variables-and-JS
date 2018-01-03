@@ -1,29 +1,42 @@
 <html lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/2374ec542f.js"></script>
     <script src="script.js" defer></script>
     <title>Playing with CSS variables and JS</title>
-    <body>
-        <h2>Update CSS Variables with <span class='h1'>JS</span></h2>
-        <div class="controls">
-            <label for="spacing">Spacing: </label>
-            <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
-
-            <label for="blur">Blur: </label>
-            <input type="range" name="blur" min="0" max="40" value="0" data-sizing="px">
-
-            <label for="grayscale">Grayscale: </label>
-            <input type="range" name="grayscale" min="0" max=100% value="0" data-sizing="%">
-
-            <label for="contrast">Contrast: </label>
-            <input type="range" name="contrast" min="40%" max=100% value="700%" data-sizing="%">
-
-
-            <label for="base">Base Color: </label>
-            <input type="color" name="base" value="#336B87">
+    <body class = "body">
+        <div class="container-fluid">
+            <h2>Update CSS Variables with <br>
+                <span>JS <i class="fa fa-paint-brush fa-rotate-270" aria-hidden="true"></i></span>
+            </h2>
         </div>
+        <div class="row">
+            <div class="col-sm-4 controls" id="controls">
+                <label for="spacing">Spacing: </label>
+                <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
 
-        <img src="https://lh3.googleusercontent.com/LYON4LbniEeoRjaWMfG3z4Dd5uvr83TJhxe0HlmvyEli5LCved7OXxd3u85vvBQkYBGyyHeYyTSvQiaOtMiFRHmvS2TdzOcJmd_W486c06wdxaZev1L5Zuc8oXmO2HKzDy_Gjw3PDGRApaWAhbVfbt_XJ-POy8NXmkFsgL1jQMEIDeBFxuYD1-nkqC7WNhkvT-utGTqBTdCo3lY-ijmWCgXdS4ELJmsV0XohToxNQ1H2z-VDbkIa4zObPzRbZo5qGGhHRaQo8y-Gf2QLWC5_rE66fVdbuXm70qWHYJp2XqdMRja8fFxXKZCWUAFL9JiNXgoLS1JoHTFaGGeMmqImV_xh_qTXfAkq7SnynYTbRVbhv9tatLwfunOKeMT8hPKfpUZNtLzZ4U3FFw_vFSuUocoyqXy2Xir3eVmjxZzlKM1YL7vtt3vz4P5Vz-3F3BfuxyELHuoUIFpl7EVCa0vTXiFFT7TJhZbNTh1-oZF1SWbDjSScQbs0M8ISiKwnSSqmJCX1bA1rVF-Tq2KAmj8xCrB8VaXA175sfS1BwqXto548d3AO-oSxw6ppXTWpSAVzDBII4ZtJB36lHcZanG_5Ix4DzRPypEs3MmYRAsU=w883-h662-no">
+                <label for="blur">Blur: </label>
+                <input type="range" name="blur" min="0" max="40" value="0" data-sizing="px">
 
+                <label for="grayscale">Grayscale: </label>
+                <input type="range" name="grayscale" min="0" max="100" value="0" data-sizing="%">
+
+                <label for="hue-rotate">Hue-rotate: </label>
+                <input type="range" name="hue-rotate" min="0" max="200" value="0" data-sizing="deg">
+
+                <label for="contrast">Contrast: </label>
+                <input type="range" name="contrast" min="50" max="400" value="100" data-sizing="%">
+
+                <label for="base">Base Color: </label>
+                <input type="color" name="base" value="#EBDF00">
+            </div>
+        <div class="col-sm-8">
+            <center><img src="https://lh3.googleusercontent.com/MMaaclUzS4_6YUxdIuep_OZ4CfSxbS8xuHNBsLizF838QwwU8QXxBFdQIy85nPzegdXCm5GAfHwLkThZ26-jHwGYPKNas3a6pAV92iG0Jf7OtOahwFEckbj88y44w6HVjR35LTHOiT57Gei1mee9n97Cjq-PiyFknSNOk9PhV4H18nXL6nTgXZtzoDjtRjkwktwIOdRYrQBS7yvSxZsdh7Z3lcU8KobxQKqYOG30BCpujg0nLk4tlua4ouAzL2QMIRs0Xi7gUP4g6HBpdL9HJmG-AOHrggFDrp7dYFYu3zbUzk3nm_Y0rfMiZdrnO5cDbndHAo8cW5JTtcbpUqYCwZzdXPE8i9S66Tpb2ZDopeAMhitSalGxiTZrRE2qUBZg1EwE7QpK-wnSCBhZy4ZmO4RRw71JYSAHrUmXlQ12bKSC_V9QNTwnVQA_B0xbgY_KIP2tonD1jn1SwVv3Kuw6-qNk8Ka0D5Ps6fiHhcEr2BAItw7b6ezvsPRJIzNc8OGvfQbDcofhsnjBfNMlEo0bgEr0d84TxSayFQnV36-LWhuie0oiAS4udmQGFj6m1-3CnBATttt1xA0zHPSH_omB1ze2BCEzrIN_ZKFQEUQ=w883-h662-no"></center>
+        </div>
+        <footer>
+            <p>Inspired by: <a target="_blank" href="https://javascript30.com/">JavaScript30</a>
+        </footer>
     </body>
 </html>
